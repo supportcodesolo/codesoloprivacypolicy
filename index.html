@@ -3,385 +3,541 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CodeSolo – Privacy Policy</title>
+<title>Privacy Policy | CodeSolo</title>
+<meta name="description" content="Privacy Policy for the CodeSolo mobile application." />
+<meta name="robots" content="index, follow" />
 <style>
   :root{
-    --bg:#0d1b2a; --card:#122233; --line:#1a3a4e; --text:#c5d5e5; --head:#4fc3f7;
-    --brand:#15698c; --green:#7ed321;
+    --bg:#070f1a;
+    --bg-2:#0b1726;
+    --panel:#0f1f31;
+    --panel-2:#13273b;
+    --line:#1c3349;
+    --text:#d3deea;
+    --muted:#8ba3b8;
+    --heading:#ffffff;
+    --accent:#3cc4f0;
+    --accent-2:#2a8fbf;
+    --green:#7ed957;
+    --warn:#f08a8a;
+    --gold:#f2c867;
+    --radius:14px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.75;font-size:15px}
-  header{background:linear-gradient(135deg,#0a3d5c,#15698c);padding:44px 24px 34px;text-align:center;border-bottom:3px solid #1a8aaa}
-  .logo-wrap{display:flex;flex-direction:column;align-items:center}
-  /* ===== LOGO =====
-     To use your real PNG logo: delete the <svg> block inside .logo-box and put
-     <img src="data:image/png;base64,YOUR_BASE64_HERE" alt="CodeSolo logo"> there. */
-  .logo-box{width:84px;height:84px;margin-bottom:10px}
-  .logo-box svg,.logo-box img{width:100%;height:100%;object-fit:contain}
-  .brand{font-size:36px;font-weight:900;letter-spacing:1px;color:#fff}
+  html{scroll-behavior:smooth;scroll-padding-top:24px}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+    font-size:15.5px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(60,196,240,.3);transition:border-color .2s}
+  a:hover{border-bottom-color:var(--accent)}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:72px 24px 64px;
+    text-align:center;
+    background:
+      radial-gradient(900px 380px at 50% -10%, rgba(60,196,240,.22), transparent 70%),
+      radial-gradient(600px 300px at 90% 110%, rgba(126,217,87,.10), transparent 70%),
+      linear-gradient(180deg,#0a1b2e 0%, var(--bg) 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse at center, #000 20%, transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse at center, #000 20%, transparent 75%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;max-width:760px;margin:0 auto}
+  .brand{font-size:40px;font-weight:800;letter-spacing:-.5px;color:var(--heading)}
   .brand span{color:var(--green)}
-  header p{margin-top:6px;color:rgba(255,255,255,.75);font-size:14px}
-  .badge{display:inline-block;margin-top:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;padding:5px 16px;border-radius:20px;font-size:13px;font-weight:600}
-  .container{max-width:840px;margin:0 auto;padding:36px 22px 70px}
-  .meta{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:28px;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:#8aaabf}
-  .meta strong{color:#e0e6f0}
-  .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:34px}
-  .toc h3{color:var(--head);font-size:15px;margin-bottom:8px}
-  .toc ol{columns:2;column-gap:28px;padding-left:20px;font-size:13.5px}
-  .toc a{color:var(--text);text-decoration:none}
-  .toc a:hover{color:var(--head)}
-  section{margin-bottom:36px;scroll-margin-top:16px}
-  h2{display:flex;align-items:center;font-size:19px;font-weight:800;color:var(--head);margin-bottom:12px}
-  .n{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;background:var(--brand);color:#fff;border-radius:8px;font-weight:800;font-size:14px;margin-right:10px}
-  h3.sub{color:#e0e6f0;font-size:15px;margin:16px 0 6px}
+  .tagline{margin-top:6px;color:var(--muted);font-size:13px;letter-spacing:3px;text-transform:uppercase}
+  .hero h1{
+    margin-top:30px;
+    font-size:34px;
+    line-height:1.2;
+    font-weight:700;
+    color:var(--heading);
+    letter-spacing:-.3px;
+  }
+  .hero p.lead{margin:14px auto 0;max-width:560px;color:var(--muted);font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+  .chip{
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:7px 16px;
+    font-size:12.5px;
+    color:var(--muted);
+  }
+  .chip strong{color:var(--heading);font-weight:600;margin-left:4px}
+
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:1120px;
+    margin:0 auto;
+    padding:48px 24px 40px;
+    display:grid;
+    grid-template-columns:260px minmax(0,1fr);
+    gap:48px;
+    align-items:start;
+  }
+  .toc{
+    position:sticky;
+    top:24px;
+    max-height:calc(100vh - 48px);
+    overflow-y:auto;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 14px 16px;
+    scrollbar-width:thin;
+    scrollbar-color:var(--line) transparent;
+  }
+  .toc h3{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    padding:0 10px 12px;
+    font-weight:700;
+  }
+  .toc a{
+    display:flex;gap:10px;align-items:baseline;
+    padding:7px 10px;
+    border:none;
+    border-radius:8px;
+    font-size:13px;
+    line-height:1.4;
+    color:var(--muted);
+    transition:background .15s,color .15s;
+  }
+  .toc a span{min-width:20px;color:#4d6a82;font-variant-numeric:tabular-nums;font-size:12px}
+  .toc a:hover{background:rgba(255,255,255,.04);color:var(--heading)}
+  .toc a.active{background:rgba(60,196,240,.12);color:var(--accent)}
+  .toc a.active span{color:var(--accent)}
+
+  /* ---------- Content ---------- */
+  main{min-width:0}
+  .intro{
+    background:linear-gradient(135deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 28px;
+    margin-bottom:40px;
+  }
+  .intro p{margin-bottom:12px}
+  .intro p:last-child{margin-bottom:0}
+  section{
+    margin-bottom:8px;
+    padding:30px 0;
+    border-top:1px solid var(--line);
+  }
+  section:first-of-type{border-top:none}
+  h2{
+    display:flex;align-items:center;gap:14px;
+    font-size:21px;
+    line-height:1.3;
+    font-weight:700;
+    color:var(--heading);
+    margin-bottom:16px;
+    letter-spacing:-.2px;
+  }
+  .num{
+    flex:0 0 auto;
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:36px;height:36px;padding:0 8px;
+    border-radius:10px;
+    background:rgba(60,196,240,.12);
+    border:1px solid rgba(60,196,240,.35);
+    color:var(--accent);
+    font-size:14px;font-weight:700;
+    font-variant-numeric:tabular-nums;
+  }
+  h3.sub{font-size:15px;color:var(--heading);margin:18px 0 8px;font-weight:600}
   p{margin-bottom:12px}
-  ul{list-style:none;margin-bottom:12px}
-  ul li{padding:5px 0 5px 24px;position:relative}
-  ul li::before{content:'→';position:absolute;left:0;color:var(--brand);font-weight:700}
-  .box{border-radius:12px;padding:15px 20px;margin:12px 0;border:1.5px solid}
-  .box p{margin:0}
-  .info{background:rgba(21,105,140,.15);border-color:rgba(21,105,140,.45)} .info p{color:#90caf9}
-  .warn{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.4)} .warn p{color:#fca5a5}
-  .ok{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.35)} .ok p{color:#86efac}
-  .gold{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.35)} .gold p{color:#fde68a}
-  .divider{height:1px;background:var(--line);margin:30px 0}
-  .tbl{overflow-x:auto;margin:12px 0}
-  table{width:100%;border-collapse:collapse;font-size:14px;min-width:480px}
-  th{background:var(--brand);color:#fff;padding:10px 14px;text-align:left}
-  td{padding:10px 14px;border-bottom:1px solid var(--line)}
-  tr:nth-child(even) td{background:#0f2030}
-  a{color:var(--head)}
-  footer{background:#0a1929;border-top:1px solid var(--line);text-align:center;padding:30px 24px;color:#6b8a9e;font-size:13px}
-  footer strong{color:#e0e6f0}
-  @media(max-width:600px){.brand{font-size:28px}h2{font-size:17px}.toc ol{columns:1}}
+  strong{color:var(--heading);font-weight:600}
+  ul{list-style:none;margin:4px 0 14px}
+  ul li{position:relative;padding:6px 0 6px 26px}
+  ul li::before{
+    content:"";
+    position:absolute;left:4px;top:15px;
+    width:7px;height:7px;border-radius:2px;
+    background:var(--accent-2);
+    transform:rotate(45deg);
+  }
+  .note{
+    margin:16px 0 4px;
+    padding:15px 18px;
+    border-radius:12px;
+    border:1px solid;
+    border-left-width:4px;
+    font-size:14.5px;
+  }
+  .note p{margin:0}
+  .note .label{display:block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;margin-bottom:4px}
+  .note.info{background:rgba(60,196,240,.07);border-color:rgba(60,196,240,.3);border-left-color:var(--accent)}
+  .note.info .label{color:var(--accent)}
+  .note.warn{background:rgba(240,138,138,.07);border-color:rgba(240,138,138,.3);border-left-color:var(--warn)}
+  .note.warn .label{color:var(--warn)}
+  .note.key{background:rgba(242,200,103,.07);border-color:rgba(242,200,103,.3);border-left-color:var(--gold)}
+  .note.key .label{color:var(--gold)}
+
+  .table-wrap{overflow-x:auto;margin:14px 0 6px;border:1px solid var(--line);border-radius:12px}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:460px}
+  th{background:var(--panel-2);color:var(--heading);text-align:left;padding:12px 16px;font-weight:600;font-size:13px;letter-spacing:.3px}
+  td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+
+  .contact-card{
+    background:linear-gradient(135deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 26px;
+  }
+  .contact-card dl{display:grid;grid-template-columns:140px 1fr;gap:10px 16px}
+  .contact-card dt{color:var(--muted);font-size:13px}
+  .contact-card dd{color:var(--heading)}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    background:var(--bg-2);
+    text-align:center;
+    padding:34px 24px 40px;
+    color:var(--muted);
+    font-size:13px;
+  }
+  footer .links{margin-top:10px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+  footer strong{color:var(--heading)}
+
+  #top-btn{
+    position:fixed;right:22px;bottom:22px;
+    width:44px;height:44px;border-radius:12px;
+    background:var(--panel-2);border:1px solid var(--line);color:var(--heading);
+    cursor:pointer;display:none;align-items:center;justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);
+    transition:transform .15s,border-color .15s;
+  }
+  #top-btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+  #top-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:940px){
+    .layout{grid-template-columns:1fr;gap:28px;padding-top:32px}
+    .toc{position:static;max-height:none}
+    .toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px}
+  }
+  @media (max-width:600px){
+    body{font-size:15px}
+    .hero{padding:52px 20px 48px}
+    .hero h1{font-size:26px}
+    .brand{font-size:32px}
+    .toc nav{grid-template-columns:1fr}
+    h2{font-size:18px}
+    .intro{padding:20px}
+    .contact-card dl{grid-template-columns:1fr;gap:2px}
+    .contact-card dt{margin-top:10px}
+  }
+
+  @media print{
+    body{background:#fff;color:#111}
+    .hero,.toc,#top-btn,footer{display:none}
+    .layout{display:block;padding:0}
+    h2,strong,h3.sub{color:#000}
+    .intro,.note,.contact-card{background:#fff;border-color:#999}
+    a{color:#000;border:none}
+  }
 </style>
 </head>
 <body>
-
-<header>
-  <div class="logo-wrap">
-    <div class="logo-box">
-      <!-- Placeholder leaf logo. Replace with your PNG (see comment above). -->
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CodeSolo logo">
-        <defs>
-          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#b6f04a"/><stop offset="1" stop-color="#4caf1f"/>
-          </linearGradient>
-        </defs>
-        <path d="M50 6C84 20 92 54 50 94 8 54 16 20 50 6Z" fill="url(#lg)"/>
-        <path d="M50 22V84M50 44L34 32M50 58L66 44M50 72L36 62" stroke="#0a3d5c" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-      </svg>
-    </div>
-    <div class="brand">Code<span>Solo</span></div>
-    <p>Learn · Challenge · Dominate</p>
-    <div class="badge">🔒 Privacy Policy</div>
-  </div>
-</header>
-
-<div class="container">
-
-  <div class="meta">
-    <span><strong>Effective Date:</strong> November 16, 2026</span>
-    <span><strong>Last Updated:</strong> November 16, 2026</span>
-    <span><strong>Applies to:</strong> CodeSolo mobile app (Android)</span>
-    <span><strong>Contact:</strong> supportcodesolo@gmail.com</span>
-  </div>
-
-  <section>
-    <p>
-      Welcome to <strong>CodeSolo</strong> ("CodeSolo", "we", "us", "our"), a coding learning app built and
-      operated from India by founders <strong>Narasimha</strong> and <strong>Venu</strong>. This Privacy Policy
-      explains what information we collect, why we collect it, how we use and protect it, who we share it with,
-      and the choices and rights you have.
-    </p>
-    <p>
-      By creating an account or using CodeSolo, you confirm that you have read this Policy and consent to the
-      practices described in it. If you do not agree, please do not use the app.
-    </p>
-  </section>
-
-  <nav class="toc">
-    <h3>Contents</h3>
-    <ol>
-      <li><a href="#s1">Information We Collect</a></li>
-      <li><a href="#s2">How We Use Your Information</a></li>
-      <li><a href="#s3">What Other Users Can See</a></li>
-      <li><a href="#s4">Messages &amp; Photos</a></li>
-      <li><a href="#s5">AI Assistant &amp; Code Runner</a></li>
-      <li><a href="#s6">Advertising</a></li>
-      <li><a href="#s7">Notifications</a></li>
-      <li><a href="#s8">Device Permissions</a></li>
-      <li><a href="#s9">Sharing of Information</a></li>
-      <li><a href="#s10">Data Retention</a></li>
-      <li><a href="#s11">Security</a></li>
-      <li><a href="#s12">Children's Privacy</a></li>
-      <li><a href="#s13">Your Rights &amp; Choices</a></li>
-      <li><a href="#s14">Deleting Your Account</a></li>
-      <li><a href="#s15">Safety, Scams &amp; Links</a></li>
-      <li><a href="#s16">International Processing</a></li>
-      <li><a href="#s17">Changes to This Policy</a></li>
-      <li><a href="#s18">Grievance Officer &amp; Contact</a></li>
-    </ol>
-  </nav>
-
-  <section id="s1">
-    <h2><span class="n">1</span>Information We Collect</h2>
-
-    <h3 class="sub">a) Information you give us</h3>
-    <ul>
-      <li>Your name, email address and profile picture, received when you sign in with your Google account</li>
-      <li>Username, bio and country that you choose to add to your profile</li>
-      <li>Posts, comments, replies, doubt questions and code projects you create (public or private)</li>
-      <li>Messages and photos you send to other users</li>
-      <li>Questions and code you submit to the in-app AI assistant</li>
-      <li>Reports you file against other users, and users you choose to block</li>
-      <li>Messages you send us by email</li>
-    </ul>
-
-    <h3 class="sub">b) Information generated by your use of the app</h3>
-    <ul>
-      <li>Learning progress, completed pages, quiz and daily-challenge results, XP, level, lives and streak</li>
-      <li>Challenge history against other users, win/loss records and leaderboard position</li>
-      <li>Who you follow and who follows you</li>
-      <li>Likes, bookmarks and views on posts and code projects</li>
-      <li>"Last seen" / online status (you can turn this off in Settings)</li>
-      <li>Your notification preferences, daily AI usage counts and daily reward-claim counts</li>
-    </ul>
-
-    <h3 class="sub">c) Technical information</h3>
-    <ul>
-      <li>Device type, operating system, and a push-notification token so we can send you alerts</li>
-      <li>Advertising identifier and related device/ad-interaction data, collected by our advertising partners (see Section 6)</li>
-      <li>Basic diagnostic and usage information (for example crashes or which features are used)</li>
-    </ul>
-
-    <div class="info box"><p>ℹ️ We do <strong>not</strong> collect your phone number, precise location, contacts, microphone or camera data, bank details or card numbers.</p></div>
-  </section>
-
-  <section id="s2">
-    <h2><span class="n">2</span>How We Use Your Information</h2>
-    <ul>
-      <li>To create and manage your account and sign you in</li>
-      <li>To save and show your learning progress, XP, lives, streaks, certificates and rankings</li>
-      <li>To run challenges, quizzes, leaderboards, the community feed, doubts and code sharing</li>
-      <li>To deliver messages between users and show you who is online (if enabled)</li>
-      <li>To send notifications such as messages, follows, comments, challenges, streak reminders and daily challenges</li>
-      <li>To power the AI assistant and the online code runner</li>
-      <li>To show advertisements and let you earn rewards by watching them</li>
-      <li>To detect spam, bad words, abuse, cheating and policy violations, and to act on user reports</li>
-      <li>To fix bugs, keep the app secure and improve features</li>
-      <li>To comply with applicable law and respond to lawful requests</li>
-    </ul>
-    <div class="ok box"><p>✅ We do <strong>not sell</strong> your personal information.</p></div>
-  </section>
-
-  <section id="s3">
-    <h2><span class="n">3</span>What Other Users Can See</h2>
-    <p>CodeSolo is a social learning app. Depending on the feature, other users can see:</p>
-    <ul>
-      <li><strong>Your public profile:</strong> username, profile picture, bio, country, level, XP, followers/following, completed-course progress, challenge history and public code projects</li>
-      <li><strong>Leaderboards:</strong> username, picture, level, XP and country</li>
-      <li><strong>Posts, comments, doubts and public projects:</strong> your username and picture along with what you post</li>
-      <li><strong>Online status:</strong> whether you were recently active (can be switched off in Settings → Show Online Status)</li>
-    </ul>
-    <p>Your email address is shown only to you. Private code projects are visible only to you.</p>
-    <div class="warn box"><p>⚠️ Anything you post publicly can be seen, copied or screenshotted by others. Do not post personal contact details, passwords or sensitive information.</p></div>
-  </section>
-
-  <section id="s4">
-    <h2><span class="n">4</span>Messages &amp; Photos</h2>
-    <ul>
-      <li>Direct messages are stored only for a limited time and are automatically deleted from our systems after that period.</li>
-      <li>Photos sent in chats are compressed and <strong>disappear automatically after 1 hour</strong>.</li>
-      <li>A recipient can still save a photo or screenshot a conversation before it disappears. We cannot prevent this.</li>
-      <li>Messages may contain links or content filtered by our automated checks. Messages may be reviewed by us if they are reported.</li>
-      <li>You can delete a message for yourself, or for everyone if you sent it.</li>
-      <li>Until two users follow each other, only a small number of messages can be sent between them. A daily message limit also applies.</li>
-    </ul>
-    <div class="info box"><p>ℹ️ CodeSolo messaging is not designed for confidential communication. Do not share sensitive information in chats.</p></div>
-  </section>
-
-  <section id="s5">
-    <h2><span class="n">5</span>AI Assistant &amp; Online Code Runner</h2>
-    <h3 class="sub">AI assistant</h3>
-    <p>
-      When you use the in-app AI helper, the question you type, recent conversation turns, and the code (and
-      program output) shown in your editor are sent to a third-party AI service to generate a reply. Do not put
-      passwords, personal data or confidential information in your code or questions. AI answers may be
-      inaccurate — always double-check them. Daily usage limits apply.
-    </p>
-    <h3 class="sub">Online code runner</h3>
-    <p>
-      When you press RUN in Java, C, C++ or SQL compilers (and other supported languages), your code and any input
-      you provide are sent to our servers and processed by an execution service so we can return the output. Do not
-      run code that contains personal or secret information. Web (HTML/CSS/JS) and Python previews run on your device.
-    </p>
-  </section>
-
-  <section id="s6">
-    <h2><span class="n">6</span>Advertising</h2>
-    <p>
-      CodeSolo is free to use and is supported by advertisements, including banner, full-screen and optional
-      "watch a video to earn a reward" ads. These ads are provided by third-party advertising partners. We
-      request <strong>non-personalised ads</strong> where available.
-    </p>
-    <ul>
-      <li>Ad partners may collect your device's advertising ID, IP address, device information and ad-interaction data to deliver and measure ads and prevent fraud.</li>
-      <li>This data is handled under the ad partners' own privacy policies; we do not control it.</li>
-      <li>You can reset or limit your advertising ID in your phone's Settings → Privacy / Ads.</li>
-      <li>Rewarded ads are always optional. Rewards (extra lives, bonus XP, AI chances) are granted only after you watch the ad.</li>
-    </ul>
-  </section>
-
-  <section id="s7">
-    <h2><span class="n">7</span>Notifications</h2>
-    <p>
-      With your permission, we send push notifications (messages, comments, likes, follows, challenges, streak and
-      daily-challenge reminders) and occasional in-app announcements. You can turn each type on or off in
-      <strong>Settings → Notifications</strong>, or disable notifications entirely in your phone's settings.
-    </p>
-  </section>
-
-  <section id="s8">
-    <h2><span class="n">8</span>Device Permissions</h2>
-    <div class="tbl"><table>
-      <tr><th>Permission</th><th>Why we ask</th></tr>
-      <tr><td>Photos / media library</td><td>To choose a photo to send in chat, and to save certificates or received photos to your gallery. We access only what you select or save.</td></tr>
-      <tr><td>Notifications</td><td>To deliver the alerts described above.</td></tr>
-      <tr><td>Internet access</td><td>To run the app, sync progress, chat and show ads.</td></tr>
-    </table></div>
-    <p>You can withdraw any permission at any time in your phone's settings; some features may stop working.</p>
-  </section>
-
-  <section id="s9">
-    <h2><span class="n">9</span>Sharing of Information</h2>
-    <p>We share information only in these situations:</p>
-    <ul>
-      <li><strong>Service providers</strong> that help us run the app — such as sign-in, data storage and hosting, push notifications, AI processing, code execution and analytics. They may process your data only to provide services to us.</li>
-      <li><strong>Advertising partners</strong> as described in Section 6.</li>
-      <li><strong>Other users</strong> as described in Section 3 and Section 4.</li>
-      <li><strong>Legal and safety reasons</strong> — to comply with law, court orders or government requests, to enforce our Terms, or to protect users and the public from fraud, abuse or harm.</li>
-      <li><strong>Business changes</strong> — if CodeSolo is transferred, merged or restructured, your information may move to the new owner under this Policy.</li>
-    </ul>
-    <p>We never sell your personal data or give your email address to advertisers.</p>
-  </section>
-
-  <section id="s10">
-    <h2><span class="n">10</span>Data Retention</h2>
-    <ul>
-      <li><strong>Account data and progress:</strong> kept while your account is active.</li>
-      <li><strong>Chat messages and chat photos:</strong> deleted automatically after a short period (photos after 1 hour).</li>
-      <li><strong>Doubt posts:</strong> removed automatically about 10 hours after posting.</li>
-      <li><strong>Notifications and temporary data:</strong> kept only as long as needed to run the feature.</li>
-      <li><strong>Reports and moderation records:</strong> kept as long as needed to keep the community safe.</li>
-      <li><strong>After account deletion:</strong> your data is deleted (see Section 14), except minimal records we must keep for legal compliance or fraud prevention.</li>
-    </ul>
-  </section>
-
-  <section id="s11">
-    <h2><span class="n">11</span>Security</h2>
-    <p>
-      We use reasonable technical and organisational measures — including encrypted connections and access
-      controls — to protect your information. However, no app or internet service can be 100% secure, and we cannot
-      guarantee absolute security.
-    </p>
-    <div class="warn box"><p>⚠️ Keep your Google account secure. Never share one-time codes or passwords with anyone claiming to be from CodeSolo. We will never ask for them.</p></div>
-  </section>
-
-  <section id="s12">
-    <h2><span class="n">12</span>Children's Privacy</h2>
-    <p>CodeSolo is intended for users aged <strong>13 and above</strong>.</p>
-    <div class="gold box"><p>👨‍👩‍👧 Users under 18 should use the app with the knowledge and consent of a parent or guardian. Children under 13 must not use CodeSolo without verifiable parental consent and supervision; the parent or guardian is responsible for the account.</p></div>
-    <p style="margin-top:12px">
-      We do not knowingly collect personal data from children under 13 without parental consent, and we do not
-      show targeted advertising to children. If you believe a child has used the app without consent, email us and
-      we will delete the account promptly.
-    </p>
-  </section>
-
-  <section id="s13">
-    <h2><span class="n">13</span>Your Rights &amp; Choices</h2>
-    <p>
-      In line with the <strong>Digital Personal Data Protection Act, 2023</strong>, the
-      <strong>Information Technology Act, 2000</strong> and rules made under them, you may:
-    </p>
-    <ul>
-      <li>Ask for a summary of the personal data we hold about you</li>
-      <li>Correct or update inaccurate data (most details can be edited in the app under Edit Profile)</li>
-      <li>Request erasure of your data / delete your account</li>
-      <li>Withdraw your consent at any time (withdrawing consent may mean you can no longer use the app)</li>
-      <li>Nominate another person to exercise your rights in case of death or incapacity</li>
-      <li>Raise a complaint with our Grievance Officer (Section 18)</li>
-    </ul>
-    <p>In-app controls: Show Online Status, Notification preferences, Blocked Users, Edit Profile, public/private project visibility, and Delete Account.</p>
-    <p>To use any right not available inside the app, email <strong>supportcodesolo@gmail.com</strong>. We may need to verify your identity first.</p>
-  </section>
-
-  <section id="s14">
-    <h2><span class="n">14</span>Deleting Your Account</h2>
-    <p>
-      You can delete your account at any time from <strong>Settings → Delete Account</strong> inside the app. If you
-      cannot access the app, email <strong>supportcodesolo@gmail.com</strong> from your registered address with the
-      subject "Delete my account".
-    </p>
-    <ul>
-      <li>Your profile, progress, XP, posts, comments, projects, follows and messages are permanently deleted.</li>
-      <li>Deletion is irreversible and virtual items (XP, lives, certificates) are lost.</li>
-      <li>Some data may remain briefly in backups before being overwritten, and minimal records may be kept where the law requires.</li>
-    </ul>
-  </section>
-
-  <section id="s15">
-    <h2><span class="n">15</span>Safety, Scams &amp; Links</h2>
-    <div class="warn box"><p>
-      🚫 <strong>Beware of scams.</strong> Other users may send suspicious links or ask for money, OTPs, passwords
-      or personal details. <strong>Do not click, do not share, do not pay.</strong> Use Report and Block. CodeSolo
-      is not responsible for losses caused by interactions with other users or external websites.
-    </p></div>
-    <p style="margin-top:12px">
-      We apply automated filters against links, spam and abusive language and act on reports. Users who receive
-      repeated valid reports may be suspended or permanently banned.
-    </p>
-    <div class="ok box"><p>✅ Found a security bug? Please report it responsibly to <strong>supportcodesolo@gmail.com</strong> before sharing it publicly. Unauthorised access or hacking attempts are offences under the IT Act, 2000 and will be pursued legally.</p></div>
-  </section>
-
-  <section id="s16">
-    <h2><span class="n">16</span>International Processing</h2>
-    <p>
-      Our service providers may store or process your information on servers located outside India. Where this
-      happens we take steps to ensure your information remains protected as described in this Policy and as
-      permitted by Indian law.
-    </p>
-  </section>
-
-  <section id="s17">
-    <h2><span class="n">17</span>Changes to This Policy</h2>
-    <p>
-      We may update this Policy from time to time. We will change the "Last Updated" date and, for important
-      changes, notify you in the app. Continued use of CodeSolo after an update means you accept the revised
-      Policy.
-    </p>
-  </section>
-
-  <section id="s18">
-    <h2><span class="n">18</span>Grievance Officer &amp; Contact</h2>
-    <p>For questions, data requests or complaints, contact our Grievance Officer:</p>
-    <div class="info box"><p>
-      👤 <strong>Grievance Officer:</strong> Narasimha, CodeSolo<br/>
-      📧 <strong>Email:</strong> <a href="mailto:supportcodesolo@gmail.com">supportcodesolo@gmail.com</a><br/>
-      🌍 <strong>Location:</strong> India<br/><br/>
-      We acknowledge complaints within <strong>48 hours</strong> and aim to resolve them within
-      <strong>15 days</strong>. For anything urgent, use the subject "URGENT – Privacy".
-    </p></div>
-  </section>
-
+<header class="hero"><div class="hero-inner">
+<div class="brand">Code<span>Solo</span></div>
+<div class="tagline">Learn &middot; Challenge &middot; Dominate</div>
+<h1>Privacy Policy</h1>
+<p class="lead">This policy explains what information CodeSolo collects, why we collect it, how it is used and protected, and the choices you have.</p>
+<div class="chips">
+<span class="chip">Effective<strong>November 22, 2026</strong></span>
+<span class="chip">Last updated<strong>November 22, 2026</strong></span>
+<span class="chip">Applies to<strong>CodeSolo mobile app (Android)</strong></span>
+</div></div></header>
+<div class="layout">
+<aside class="toc" aria-label="Table of contents"><h3>Contents</h3><nav>
+<a href="#s1"><span>1</span>Information We Collect</a>
+<a href="#s2"><span>2</span>How We Use Your Information</a>
+<a href="#s3"><span>3</span>Consent and Legal Basis</a>
+<a href="#s4"><span>4</span>What Other Users Can See</a>
+<a href="#s5"><span>5</span>Messages and Photos</a>
+<a href="#s6"><span>6</span>AI Assistant and Online Code Runner</a>
+<a href="#s7"><span>7</span>Advertising</a>
+<a href="#s8"><span>8</span>Premium Subscriptions and Payments</a>
+<a href="#s9"><span>9</span>Notifications</a>
+<a href="#s10"><span>10</span>Device Permissions</a>
+<a href="#s11"><span>11</span>Sharing of Information</a>
+<a href="#s12"><span>12</span>Data Retention</a>
+<a href="#s13"><span>13</span>Security</a>
+<a href="#s14"><span>14</span>No Guarantee of Privacy or Security</a>
+<a href="#s15"><span>15</span>Children&rsquo;s Privacy</a>
+<a href="#s16"><span>16</span>Your Rights and Choices</a>
+<a href="#s17"><span>17</span>Deleting Your Account</a>
+<a href="#s18"><span>18</span>Safety, Scams and Links</a>
+<a href="#s19"><span>19</span>International Processing</a>
+<a href="#s20"><span>20</span>Changes to This Policy</a>
+<a href="#s21"><span>21</span>Grievance Officer and Contact</a>
+</nav></aside>
+<main>
+<div class="intro">
+<p>Welcome to <strong>CodeSolo</strong> (&ldquo;CodeSolo&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;), a coding-learning application built and operated from India by its founders, <strong>Narasimha</strong> and <strong>Venu</strong>. This Privacy Policy (&ldquo;Policy&rdquo;) explains what information we collect, why we collect it, how we use and protect it, who we share it with, and the rights and choices you have.</p>
+<p>By creating an account or using CodeSolo, you confirm that you have read this Policy and consent to the practices described in it. Please also read our Terms and Conditions. If you do not agree with this Policy, please do not use the App.</p>
 </div>
+<section id="s1">
+<h2><span class="num">1</span>Information We Collect</h2>
+<h3 class="sub">a) Information you provide</h3>
+<ul>
+<li>Your name, email address and profile picture, received when you sign in with your Google account</li>
+<li>Username, bio and country that you choose to add to your profile</li>
+<li>Posts, comments, replies, doubts and code projects you create (public or private)</li>
+<li>Messages and photos you send to other users</li>
+<li>Questions and code you submit to the in-app AI assistant</li>
+<li>Reports you file against other users, and the users you choose to block</li>
+<li>Emails and other communications you send to us</li>
+</ul>
+<h3 class="sub">b) Information generated by your use of the App</h3>
+<ul>
+<li>Learning progress, completed pages, quiz and daily-challenge results, XP, level, lives and streak</li>
+<li>Challenge history against other users, win and loss records, and leaderboard position</li>
+<li>Who you follow and who follows you</li>
+<li>Likes, bookmarks, views and comments on posts and code projects</li>
+<li>&ldquo;Last seen&rdquo; and online status (you can turn this off in Settings)</li>
+<li>Notification preferences, daily AI usage counts and daily reward-claim counts</li>
+<li>Premium subscription status, plan type and expiry date, where you have purchased a plan</li>
+</ul>
+<h3 class="sub">c) Technical information</h3>
+<ul>
+<li>Device type, operating system version, and a push-notification token so that we can send you alerts</li>
+<li>Device time zone, used to deliver reminders at a suitable local time</li>
+<li>Advertising identifier, IP address and ad-interaction data, collected by our advertising partners (see Section 7)</li>
+<li>Basic diagnostic and usage information, such as crash reports and which features are used</li>
+</ul>
+<div class="note info"><p><span class="label">What we do not collect</span>We do <strong>not</strong> collect your phone number, precise location, contacts, microphone recordings, bank details or payment card numbers. Purchases are processed by Google Play, which does not share your card details with us.</p></div>
+</section>
+<section id="s2">
+<h2><span class="num">2</span>How We Use Your Information</h2>
+<ul>
+<li>To create and manage your account and sign you in</li>
+<li>To save and display your learning progress, XP, lives, streaks, certificates and rankings</li>
+<li>To run challenges, quizzes, leaderboards, the community feed, doubts and code sharing</li>
+<li>To deliver messages between users and show online status (if enabled)</li>
+<li>To send notifications such as messages, follows, comments, challenges, streak reminders and daily challenges</li>
+<li>To power the AI assistant and the online code runner</li>
+<li>To show advertisements and allow you to earn rewards by watching them</li>
+<li>To manage Premium subscriptions and unlock the related benefits</li>
+<li>To detect spam, abusive language, cheating and policy violations, and to act on user reports</li>
+<li>To fix bugs, keep the App secure and improve our features</li>
+<li>To comply with applicable law and respond to lawful requests</li>
+</ul>
+<div class="note key"><p><span class="label">No sale of data</span>We do <strong>not sell</strong> your personal information.</p></div>
+</section>
+<section id="s3">
+<h2><span class="num">3</span>Consent and Legal Basis</h2>
+<p>We process your personal data on the basis of your consent, which you give when you create an account and accept this Policy, and where processing is necessary to provide the App, to comply with the law, or for other lawful purposes permitted under the Digital Personal Data Protection Act, 2023 and other applicable Indian law.</p>
+<p>You may withdraw your consent at any time, as described in Section 16. Withdrawing consent may mean that we can no longer provide some or all features of the App to you.</p>
+</section>
+<section id="s4">
+<h2><span class="num">4</span>What Other Users Can See</h2>
+<p>CodeSolo is a social learning App. Depending on the feature, other users can see:</p>
+<ul>
+<li><strong>Your public profile:</strong> username, profile picture, bio, country, level, XP, followers and following, completed-course progress, challenge history and public code projects</li>
+<li><strong>Leaderboards:</strong> username, picture, level, XP and country</li>
+<li><strong>Posts, comments, doubts and public projects:</strong> your username and picture together with what you post</li>
+<li><strong>Online status:</strong> whether you were recently active (you can switch this off in Settings)</li>
+</ul>
+<p>Your email address is shown only to you. Private code projects are visible only to you.</p>
+<div class="note warn"><p><span class="label">Important</span>Anything you post publicly can be seen, copied or screenshotted by others. Do not post personal contact details, passwords or other sensitive information.</p></div>
+</section>
+<section id="s5">
+<h2><span class="num">5</span>Messages and Photos</h2>
+<ul>
+<li>Direct messages are stored only for a limited time and are automatically deleted from our systems after that period.</li>
+<li>Photos sent in chats are compressed and <strong>disappear automatically after about one hour</strong>.</li>
+<li>A recipient can still save a photo or take a screenshot of a conversation before it disappears. We cannot prevent this.</li>
+<li>Messages are filtered by automated checks and may be reviewed by us if they are reported.</li>
+<li>You can delete a message for yourself, or for everyone if you sent it.</li>
+<li>Until two users follow each other, only a small number of messages can be sent between them. A daily message limit also applies.</li>
+</ul>
+<div class="note info"><p><span class="label">Please note</span>Messaging in CodeSolo is not end-to-end encrypted and is not designed for confidential communication. Do not share sensitive information in chats.</p></div>
+</section>
+<section id="s6">
+<h2><span class="num">6</span>AI Assistant and Online Code Runner</h2>
+<h3 class="sub">AI assistant</h3>
+<p>When you use the in-app AI helper, the question you type, recent conversation turns, and the code and program output shown in your editor are sent to a third-party AI service in order to generate a reply. Do not enter passwords, personal data or confidential information in your code or questions. AI answers may be inaccurate, so always verify them. Daily usage limits apply.</p>
+<h3 class="sub">Online code runner</h3>
+<p>When you run code in the Java, C, C++, SQL and other supported compilers, your code and any input you provide are sent to our servers and processed by an execution service so that we can return the output. Do not run code that contains personal or secret information. Web previews (HTML, CSS and JavaScript) and some other previews run on your device.</p>
+</section>
+<section id="s7">
+<h2><span class="num">7</span>Advertising</h2>
+<p>The free version of CodeSolo is supported by advertisements, including banner, full-screen and optional rewarded video ads. These ads are provided by third-party advertising partners. Where available, we request <strong>non-personalised ads</strong>.</p>
+<ul>
+<li>Advertising partners may collect your device advertising ID, IP address, device information and ad-interaction data in order to deliver and measure ads and to prevent fraud.</li>
+<li>This data is handled under the advertising partners&rsquo; own privacy policies, and we do not control it.</li>
+<li>You can reset or limit your advertising ID in your phone&rsquo;s Settings under Privacy or Ads.</li>
+<li>Rewarded ads are always optional. Rewards such as extra lives, bonus XP, AI uses or a certificate download are granted only after you watch the ad.</li>
+<li>Premium users may see fewer or no ads, as described in the App.</li>
+</ul>
+</section>
+<section id="s8">
+<h2><span class="num">8</span>Premium Subscriptions and Payments</h2>
+<p>If you purchase a Premium plan, the payment is processed entirely by Google Play. We do not receive or store your card number, bank details or other payment credentials. We receive only the information needed to confirm and manage your subscription, such as the plan type, status and expiry date.</p>
+<p>Billing, renewal, cancellation and refunds are governed by Google Play&rsquo;s terms and policies, as well as our Terms and Conditions.</p>
+</section>
+<section id="s9">
+<h2><span class="num">9</span>Notifications</h2>
+<p>With your permission, we send push notifications about messages, comments, likes, follows, challenges, streaks and daily challenges, as well as occasional in-app announcements. You can turn each type on or off in <strong>Settings &rarr; Notifications</strong>, or disable notifications entirely in your phone&rsquo;s settings.</p>
+</section>
+<section id="s10">
+<h2><span class="num">10</span>Device Permissions</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Permission</th><th>Why we ask</th></tr></thead>
+<tbody>
+<tr><td>Photos and media library</td><td>To choose a photo to send in chat, and to save certificates or received photos to your gallery. We access only what you select or save.</td></tr>
+<tr><td>Notifications</td><td>To deliver the alerts described in Section 9.</td></tr>
+<tr><td>Internet access</td><td>To run the App, sync progress, deliver messages and show ads.</td></tr>
+</tbody></table></div>
+<p style="margin-top:14px">You can withdraw any permission at any time in your phone&rsquo;s settings. Some features may stop working if you do.</p>
+</section>
+<section id="s11">
+<h2><span class="num">11</span>Sharing of Information</h2>
+<p>We share information only in the following situations:</p>
+<ul>
+<li><strong>Service providers</strong> that help us run the App, such as sign-in, data storage and hosting, push notifications, AI processing, code execution and analytics. They may process your data only to provide services to us.</li>
+<li><strong>Advertising partners</strong>, as described in Section 7.</li>
+<li><strong>Other users</strong>, as described in Sections 4 and 5.</li>
+<li><strong>Legal and safety reasons</strong>, including to comply with law, court orders or government requests, to enforce our Terms, or to protect users and the public from fraud, abuse or harm.</li>
+<li><strong>Business changes</strong>. If CodeSolo is transferred, merged or restructured, your information may pass to the new owner subject to this Policy.</li>
+</ul>
+<p>We never sell your personal data or give your email address to advertisers.</p>
+</section>
+<section id="s12">
+<h2><span class="num">12</span>Data Retention</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Data</th><th>How long we keep it</th></tr></thead>
+<tbody>
+<tr><td>Account data and progress</td><td>While your account is active</td></tr>
+<tr><td>Chat messages</td><td>Deleted automatically after a limited period</td></tr>
+<tr><td>Chat photos</td><td>Deleted automatically after about 1 hour</td></tr>
+<tr><td>Doubt posts</td><td>Removed automatically about 10 hours after posting</td></tr>
+<tr><td>Notifications and temporary data</td><td>Only as long as needed to run the feature</td></tr>
+<tr><td>Reports and moderation records</td><td>As long as needed to keep the community safe</td></tr>
+<tr><td>After account deletion</td><td>Deleted, except minimal records we must keep for legal compliance, security or fraud prevention</td></tr>
+</tbody></table></div>
+</section>
+<section id="s13">
+<h2><span class="num">13</span>Security</h2>
+<p>We use reasonable technical and organisational measures, including encrypted connections and access controls, to help protect your information. These measures are designed to reduce risk, but they cannot remove it entirely.</p>
+<div class="note warn"><p><span class="label">Protect your account</span>Keep your Google account secure. Never share one-time codes or passwords with anyone claiming to be from CodeSolo. We will never ask for them.</p></div>
+</section>
+<section id="s14">
+<h2><span class="num">14</span>No Guarantee of Privacy or Security</h2>
+<p>While we take the protection of your information seriously, <strong>we do not guarantee absolute privacy or security</strong>. No app, server, network or method of electronic storage is completely secure, and we cannot promise that your information will never be accessed, disclosed, altered or lost.</p>
+<ul>
+<li>Information you post publicly, send to other users, or include in code or AI questions may be seen, copied, saved or shared by others, or processed by third parties, outside our control.</li>
+<li>Third-party service providers and advertising partners operate under their own security practices and privacy policies. We are not responsible for their acts or omissions.</li>
+<li>Unauthorised access may occur through causes beyond our reasonable control, such as hacking, malware, a compromised device or Google account, or user error.</li>
+<li>By using the App you accept these risks and use it at your own responsibility.</li>
+</ul>
+<p>If we become aware of a breach affecting your personal data, we will take reasonable steps to address it and will notify affected users and authorities where the law requires. To the maximum extent permitted by law, CodeSolo and its founders are not liable for loss or damage arising from unauthorised access to, or disclosure of, your information, except where such liability cannot be excluded under applicable law.</p>
+</section>
+<section id="s15">
+<h2><span class="num">15</span>Children&rsquo;s Privacy</h2>
+<p>CodeSolo is intended for users aged <strong>13 and above</strong> and is not directed at children under 13. We do not knowingly collect personal data from children under 13, and we do not show targeted advertising to children.</p>
+<p>Users under 18 should use the App with the knowledge and consent of a parent or guardian. If you believe a child under 13 has created an account, please email us and we will delete the account promptly.</p>
+</section>
+<section id="s16">
+<h2><span class="num">16</span>Your Rights and Choices</h2>
+<p>In line with the <strong>Digital Personal Data Protection Act, 2023</strong>, the <strong>Information Technology Act, 2000</strong> and the rules made under them, you may:</p>
+<ul>
+<li>Request a summary of the personal data we hold about you</li>
+<li>Correct or update inaccurate data (most details can be edited in the App under Edit Profile)</li>
+<li>Request erasure of your data or delete your account</li>
+<li>Withdraw your consent at any time</li>
+<li>Nominate another person to exercise your rights in the event of your death or incapacity</li>
+<li>Raise a complaint with our Grievance Officer (Section 21)</li>
+</ul>
+<p>In-app controls include Show Online Status, Notification preferences, Blocked Users, Edit Profile, public or private project visibility, and Delete Account.</p>
+<p>To exercise any right not available inside the App, email <a href="mailto:supportcodesolo@gmail.com">supportcodesolo@gmail.com</a>. We may need to verify your identity first.</p>
+</section>
+<section id="s17">
+<h2><span class="num">17</span>Deleting Your Account</h2>
+<p>You can delete your account at any time from <strong>Settings &rarr; Delete Account</strong> inside the App. If you cannot access the App, email <a href="mailto:supportcodesolo@gmail.com">supportcodesolo@gmail.com</a> from your registered address with the subject &ldquo;Delete my account&rdquo;.</p>
+<ul>
+<li>Your profile, progress, XP, posts, comments, projects, follows and messages are permanently deleted.</li>
+<li>Deletion is irreversible, and virtual items such as XP, lives and certificates are lost.</li>
+<li>Some data may remain briefly in backups before being overwritten, and minimal records may be kept where the law requires.</li>
+<li>Deleting your account does not cancel a Google Play subscription. Please cancel any active subscription in the Google Play Store.</li>
+</ul>
+</section>
+<section id="s18">
+<h2><span class="num">18</span>Safety, Scams and Links</h2>
+<div class="note warn"><p><span class="label">Beware of scams</span>Other users may send suspicious links or ask for money, one-time codes, passwords or personal details. <strong>Do not click, do not share, do not pay.</strong> Use Report and Block. CodeSolo is not responsible for losses caused by interactions with other users or external websites.</p></div>
+<p style="margin-top:14px">We apply automated filters against links, spam and abusive language, and we act on reports. Users who receive repeated valid reports may be suspended or permanently banned.</p>
+<p>If you find a security issue, please report it responsibly to <a href="mailto:supportcodesolo@gmail.com">supportcodesolo@gmail.com</a> before sharing it publicly. Unauthorised access or hacking attempts are offences under the Information Technology Act, 2000 and will be pursued legally.</p>
+</section>
+<section id="s19">
+<h2><span class="num">19</span>International Processing</h2>
+<p>Our service providers may store or process your information on servers located outside India. Where this happens, we take steps to ensure your information remains protected as described in this Policy and as permitted by Indian law.</p>
+</section>
+<section id="s20">
+<h2><span class="num">20</span>Changes to This Policy</h2>
+<p>We may update this Policy from time to time. We will change the &ldquo;Last updated&rdquo; date and, for important changes, notify you in the App. Your continued use of CodeSolo after an update means you accept the revised Policy.</p>
+</section>
 
+<section id="s21">
+<h2><span class="num">21</span>Grievance Officer and Contact</h2>
+<p>For questions, data requests or complaints, please contact our Grievance Officer.</p>
+<div class="contact-card"><dl>
+<dt>Grievance Officer</dt><dd>Narasimha, CodeSolo</dd>
+<dt>Email</dt><dd><a href="mailto:supportcodesolo@gmail.com">supportcodesolo@gmail.com</a></dd>
+<dt>Location</dt><dd>India</dd>
+<dt>Response time</dt><dd>We acknowledge complaints within 48 hours and aim to resolve them within 15 days</dd>
+<dt>Urgent matters</dt><dd>Use the subject line &ldquo;URGENT - Privacy&rdquo;</dd>
+</dl></div>
+</section>
+</main></div>
 <footer>
-  <p>© 2026 <strong>CodeSolo</strong>. All rights reserved. Made with ❤️ in India.</p>
-  <p style="margin-top:8px">Founders: <strong>Narasimha</strong> &amp; <strong>Venu</strong> · <a href="mailto:supportcodesolo@gmail.com">supportcodesolo@gmail.com</a></p>
+<p>&copy; 2026 <strong>CodeSolo</strong>. All rights reserved.</p>
+<div class="links"><a href="mailto:supportcodesolo@gmail.com">supportcodesolo@gmail.com</a></div>
 </footer>
+<button id="top-btn" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  var btn = document.getElementById('top-btn');
 
+  function onScroll(){
+    var y = window.scrollY || document.documentElement.scrollTop;
+    btn.style.display = y > 600 ? 'flex' : 'none';
+    var current = 0;
+    for (var i = 0; i < sections.length; i++){
+      if (sections[i] && sections[i].getBoundingClientRect().top <= 120) current = i;
+    }
+    links.forEach(function(a, i){ a.classList.toggle('active', i === current && y > 300); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
 </body>
 </html>
